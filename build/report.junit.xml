@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="2" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.002035">
-    <testsuite name="Virtualmin API Test Suite" tests="2" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.002035">
-      <testsuite name="FintechSystems\VirtualminApi\Tests\ApiTest" file="/home/eugene/code/virtualmin-api/tests/ApiTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.001988">
-        <testcase name="it_checks_if_the_debugger_is_working" class="FintechSystems\VirtualminApi\Tests\ApiTest" classname="FintechSystems.VirtualminApi.Tests.ApiTest" file="/home/eugene/code/virtualmin-api/tests/ApiTest.php" line="10" assertions="1" time="0.001988"/>
+  <testsuite name="" tests="2" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.003285">
+    <testsuite name="Virtualmin API Test Suite" tests="2" assertions="2" errors="0" warnings="0" failures="0" skipped="0" time="0.003285">
+      <testsuite name="FintechSystems\VirtualminApi\Tests\ApiTest" file="/home/eugene/code/virtualmin-api/tests/ApiTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.003212">
+        <testcase name="it_checks_if_the_debugger_is_working" class="FintechSystems\VirtualminApi\Tests\ApiTest" classname="FintechSystems.VirtualminApi.Tests.ApiTest" file="/home/eugene/code/virtualmin-api/tests/ApiTest.php" line="10" assertions="1" time="0.003212"/>
       </testsuite>
-      <testsuite name="Mpociot\ChuckNorrisJokes\Tests\JokeFactoryTest" file="/home/eugene/code/virtualmin-api/tests/JokeFactoryTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.000047">
-        <testcase name="it_returns_a_random_joke" class="Mpociot\ChuckNorrisJokes\Tests\JokeFactoryTest" classname="Mpociot.ChuckNorrisJokes.Tests.JokeFactoryTest" file="/home/eugene/code/virtualmin-api/tests/JokeFactoryTest.php" line="10" assertions="1" time="0.000047"/>
+      <testsuite name="Mpociot\ChuckNorrisJokes\Tests\JokeFactoryTest" file="/home/eugene/code/virtualmin-api/tests/JokeFactoryTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.000074">
+        <testcase name="it_returns_a_random_joke" class="Mpociot\ChuckNorrisJokes\Tests\JokeFactoryTest" classname="Mpociot.ChuckNorrisJokes.Tests.JokeFactoryTest" file="/home/eugene/code/virtualmin-api/tests/JokeFactoryTest.php" line="10" assertions="1" time="0.000074"/>
       </testsuite>
     </testsuite>
   </testsuite>

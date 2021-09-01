@@ -13,5 +13,8 @@ class ApiTest extends TestCase
         $api = new Api;
         $api->debug();
         $this->assertTrue(true);
+
+
+        // Test
     }
 }

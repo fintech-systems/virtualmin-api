@@ -1,0 +1,27 @@
+{
+    "name": "fintech-systems/virtualmin-api",
+    "description": "A Virtualmin API designed to run standalone or as part of a Laravel Application",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "FintechSystems\\VirtualminApi\\": "src/",
+            "Mpociot\\ChuckNorrisJokes\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FintechSystems\\VirtualminApi\\Tests\\": "tests",
+            "Mpociot\\ChuckNorrisJokes\\Tests\\": "tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "Eugene van der Merwe",
+            "email": "eugenevdm@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}

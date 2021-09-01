@@ -15,9 +15,7 @@ We have tests!
 
 ![GitHub](https://img.shields.io/github/license/fintech-systems/virtualmin-api)
 
-
-
-Code coverage: ?
+![Codecov branch](https://img.shields.io/codecov/c/github/fintech-systems/virtualmin-api/main)
 
 To regenerate coverage reports:
 

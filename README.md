@@ -11,6 +11,12 @@ We have tests!
 
 [![Build Status](https://app.travis-ci.com/fintech-systems/virtualmin-api.svg?branch=main)](https://app.travis-ci.com/fintech-systems/virtualmin-api)
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/fintech-systems/virtualmin-api)
+
+![GitHub](https://img.shields.io/github/license/fintech-systems/virtualmin-api)
+
+
+
 Code coverage: ?
 
 To regenerate coverage reports:

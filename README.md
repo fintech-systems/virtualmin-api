@@ -1,5 +1,6 @@
 # Virtualmin API
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/fintech-systems/virtualmin-api) [![Build Status](https://app.travis-ci.com/fintech-systems/virtualmin-api.svg?branch=main)](https://app.travis-ci.com/fintech-systems/virtualmin-api) ![Codecov branch](https://img.shields.io/codecov/c/github/fintech-systems/virtualmin-api/main) ![GitHub](https://img.shields.io/github/license/fintech-systems/virtualmin-api)
+
 A Virtualmin API designed to run standalone or as part of a Laravel Application
 
 Features:
@@ -34,4 +35,4 @@ For local editing, add this to `composer.json`:
             "url": "../virtualmin-api"
         }
     ]
-```json
+```

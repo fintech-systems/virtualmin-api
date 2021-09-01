@@ -6,6 +6,11 @@ Features:
 - Auditing
 
 # Tests
+
+We have tests!
+
+Code coverage: ?
+
 To regenerate coverage reports:
 
 `XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-html=tests/coverage-report`

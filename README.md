@@ -9,6 +9,8 @@ Features:
 
 We have tests!
 
+[![Build Status](https://app.travis-ci.com/fintech-systems/virtualmin-api.svg?branch=main)](https://app.travis-ci.com/fintech-systems/virtualmin-api)
+
 Code coverage: ?
 
 To regenerate coverage reports:

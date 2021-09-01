@@ -18,4 +18,16 @@ class JokeFactoryTest extends TestCase
 
         $this->assertSame('This is a joke', $joke);        
     }
+
+    /** @test */
+    public function it_calls_helo()
+    {
+        $jokes = new JokeFactory([
+            'This is a joke',
+        ]);
+
+        $joke = $jokes->hello();
+
+        $this->assertTrue(true);
+    }
 }

@@ -6,6 +6,6 @@ class Api
 {
     public function debug()
     {
-        echo 'api debugger invoked' . PHP_EOL;
+        echo 'api debugger invoked!' . PHP_EOL;
     }
 }

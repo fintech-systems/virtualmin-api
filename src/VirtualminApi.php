@@ -52,5 +52,4 @@ class VirtualminApi
 
         return json_decode($result);
     }
-    
 }

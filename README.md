@@ -45,7 +45,16 @@ This standalone package was inspired by video course by Marcel Pociot of BeyondC
 
 Before doing the video course I had developed many version of the same thing but it was never standalone and as a consequence over the years it was difficult to maintain.
 
+# License
+
+MIT
+
+See also:
+
+- https://chosealicense.com
+- https://tldrlegal.com
+
 # Author
 
-eugene (at) vander.host
+eugene (at) vander.host<br>
 +27 82 309-6710

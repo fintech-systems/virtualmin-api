@@ -28,4 +28,4 @@ Homestead.json
 ## /build is created during 
 /build/
 phpunit.xml.dist.bak
-
+coverage.xml

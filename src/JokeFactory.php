@@ -11,10 +11,9 @@ class JokeFactory
 
     public function __construct(array $jokes = null)
     {
-        if ($jokes) 
-        {
+        if ($jokes) {
             $this->jokes = $jokes;
-        }        
+        }
     }
 
     public function getRandomJoke()
@@ -24,6 +23,6 @@ class JokeFactory
 
     public function hello()
     {
-        echo 'chuck norris joke goes here' . PHP_EOL;
+        echo 'chuck norris joke goes here'.PHP_EOL;
     }
 }

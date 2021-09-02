@@ -4,5 +4,4 @@ namespace Mpociot\ChuckNorrisJokes\Jokes;
 
 class Joke
 {
-
 }

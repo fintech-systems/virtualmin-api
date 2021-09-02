@@ -16,7 +16,7 @@ class JokeFactoryTest extends TestCase
 
         $joke = $jokes->getRandomJoke();
 
-        $this->assertSame('This is a joke', $joke);        
+        $this->assertSame('This is a joke', $joke);
     }
 
     /** @test */

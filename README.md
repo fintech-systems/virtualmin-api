@@ -19,9 +19,10 @@ To regenerate coverage reports:
 
 See also `.travis.yml`
 
-# Semver
+## Version Control
 
-We use Semantic Versioning
+This application uses Semantic Versioning
+
 https://semver.org/
 
 # Local Editing
@@ -36,3 +37,15 @@ For local editing, add this to `composer.json`:
         }
     ]
 ```
+
+# Credits
+
+This standalone package was inspired by video course by Marcel Pociot of BeyondCode:<br>
+[PHP Package Development](https://beyondco.de/video-courses/php-package-development)
+
+Before doing the video course I had developed many version of the same thing but it was never standalone and as a consequence over the years it was difficult to maintain.
+
+# Author
+
+eugene (at) vander.host
++27 82 309-6710

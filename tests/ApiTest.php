@@ -14,7 +14,6 @@ class ApiTest extends TestCase
         $api->debug();
         $this->assertTrue(true);
 
-
         // Test
     }
 }

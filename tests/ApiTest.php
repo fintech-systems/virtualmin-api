@@ -3,20 +3,13 @@
 namespace FintechSystems\VirtualminApi\Tests;
 
 use Exception;
-use FintechSystems\VirtualminApi\Api;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Dotenv\Dotenv;
+use FintechSystems\VirtualminApi\Api;
+use FintechSystems\VirtualminApi\VirtualminApi;
 
 class ApiTest extends TestCase
-{
-    /** @test */
-    public function it_checks_if_the_api_is_instantiable()
-    {
-        $api = new Api();
-        $result = $api->test();
-        $this->assertEquals('The API was invoked.', $result);
-    }
-
+{    
     /** @test */
     public function it_can_read_the_env_file_and_assign_it_to_an_array()
     {
@@ -55,7 +48,7 @@ class ApiTest extends TestCase
             return;
         }
 
-        $api = new Api($host, true);
+        $api = new VirtualminApi($host, true);
 
         $result = $api->getDomains();
 

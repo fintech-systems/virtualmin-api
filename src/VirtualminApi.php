@@ -2,11 +2,14 @@
 
 namespace FintechSystems\VirtualminApi;
 
-class Api
+class VirtualminApi
 {
     private $host;
     private $debug;
 
+    /**
+     * By default Wget won't produce output because of this flag. For debugging, we clear it.
+     */
     private $quiet = '--quiet';
 
     public function __construct($host = null, $debug = false)
@@ -49,10 +52,5 @@ class Api
 
         return json_decode($result);
     }
-
-    // Deprecated
-    public function test()
-    {
-        return 'The API was invoked.';
-    }
+    
 }

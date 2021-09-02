@@ -21,11 +21,22 @@
             "email": "eugenevdm@gmail.com"
         }
     ],
-    "require-dev": {
-        "phpunit/phpunit": "^9.5"
-    },
     "require": {
         "symfony/dotenv": "^5.3",
         "spatie/ray": "^1.30"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^6.20"
+    },    
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FintechSystems\\VirtualminApi\\VirtualminApiServiceProvider"
+            ],
+            "aliases": {
+                "VirtualminApi": "FintechSystems\\VirtualminApi\\Facades\\VirtualminApi"
+            }
+        }
     }
 }

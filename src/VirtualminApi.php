@@ -7,7 +7,7 @@ class VirtualminApi
     private $host;
 
     /**
-     * Mode can be debug or cache
+     * Mode can be debug or cache.
      */
     private $mode;
 
@@ -52,7 +52,8 @@ class VirtualminApi
         $command = "wget -O - $this->quiet --http-user='$username' --http-passwd='$password' --no-check-certificate 'https://$host:$port/virtual-server/remote.cgi?json=1&multiline&program=$program'";
 
         if ($this->mode == 'read_cache') {
-            $file = file_get_contents('storage/' . $program . '.json');
+            $file = file_get_contents('storage/'.$program.'.json');
+
             return $file;
         }
 
@@ -61,7 +62,7 @@ class VirtualminApi
         );
 
         if ($this->mode == 'write_cache') {
-            file_put_contents('storage/' . $program . '.json', $result);
+            file_put_contents('storage/'.$program.'.json', $result);
         }
 
         return $result;

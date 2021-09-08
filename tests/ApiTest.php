@@ -2,11 +2,8 @@
 
 namespace FintechSystems\VirtualminApi\Tests;
 
-use Exception;
-use PHPUnit\Framework\TestCase;
-use Symfony\Component\Dotenv\Dotenv;
-use FintechSystems\VirtualminApi\Tests\Setup;
 use FintechSystems\VirtualminApi\VirtualminApi;
+use Symfony\Component\Dotenv\Dotenv;
 
 class ApiTest extends Setup
 {
@@ -27,8 +24,9 @@ class ApiTest extends Setup
     /** @test */
     public function it_retrieves_a_list_of_domains_on_a_live_server()
     {
-        if (!$host = $this->getHostInformation()) {
+        if (! $host = $this->getHostInformation()) {
             $this->assertTrue(true);
+
             return;
         }
 
@@ -44,8 +42,9 @@ class ApiTest extends Setup
     /** @test */
     public function it_retrieves_a_list_of_domains_on_a_live_server_and_saves_it_as_a_file()
     {
-        if (!$host = $this->getHostInformation()) {
+        if (! $host = $this->getHostInformation()) {
             $this->assertTrue(true);
+
             return;
         }
 
@@ -69,8 +68,9 @@ class ApiTest extends Setup
     /** @test */
     public function it_retrieves_a_cached_response_for_list_domains_from_the_virtualmin_api()
     {
-        if (!$host = $this->getHostInformation()) {
+        if (! $host = $this->getHostInformation()) {
             $this->assertTrue(true);
+
             return;
         }
 

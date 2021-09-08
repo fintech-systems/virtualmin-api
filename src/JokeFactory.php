@@ -7,6 +7,8 @@ class JokeFactory
     protected $jokes = [
         'haha',
         'lol',
+        'tra-la-la',
+        'ho-ho-ho',
     ];
 
     public function __construct(array $jokes = null)

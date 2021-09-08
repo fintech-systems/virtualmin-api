@@ -59,7 +59,7 @@
                "/home/another-domain/public_html"
             ],
             "bandwidth_usage" : [
-               "524.99 MiB"
+               "547.66 MiB"
             ],
             "created_unix_time" : [
                "1630580052"
@@ -83,7 +83,7 @@
                "None"
             ],
             "bandwidth_byte_usage" : [
-               "550492809"
+               "574271510"
             ],
             "maximum_alias_servers" : [
                "*"
@@ -271,7 +271,7 @@
                "17/Oct/2020 14:46"
             ],
             "lets_encrypt_cert_issued" : [
-               "08/Sep/2021 16:03"
+               "08/Sep/2021 22:33"
             ],
             "url" : [
                "http://example.com/"
@@ -304,7 +304,7 @@
                "/home/example/public_html"
             ],
             "bandwidth_usage" : [
-               "317.95 KiB"
+               "332.05 KiB"
             ],
             "created_unix_time" : [
                "1602938795"
@@ -331,7 +331,7 @@
                "None"
             ],
             "bandwidth_byte_usage" : [
-               "325588"
+               "340029"
             ],
             "maximum_alias_servers" : [
                "*"

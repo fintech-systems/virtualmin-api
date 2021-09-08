@@ -56,7 +56,7 @@ class ApiTest extends Setup
     }
 
     /** @test */
-    public function it_can_retrieve_a_list_of_domains_from_json_example_on_disk()
+    public function it_can_retrieve_a_list_of_domains_from_a_list_domains_json_example_on_disk()
     {
         $file = file_get_contents('storage/list-domains.json');
 
@@ -79,5 +79,10 @@ class ApiTest extends Setup
         $result = $api->getDomains();
 
         $this->assertEquals('success', $result->status);
+    }
+
+    /** test */
+    public function it_flattens_a_virtualmin_api_list_domains_command_and_returns_domains_ips_usernames_plans_and_statuses() {
+        
     }
 }

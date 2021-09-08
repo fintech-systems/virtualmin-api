@@ -7,9 +7,11 @@ Features:
 
 - Auditing
 
-# Tests
+# Testing
 
 We have tests!
+
+vendor/bin/phpunit
 
 ## Coverage reports
 

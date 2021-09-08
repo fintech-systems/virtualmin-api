@@ -3,7 +3,6 @@
 namespace FintechSystems\VirtualminApi\Tests;
 
 use Exception;
-use FintechSystems\VirtualminApi\VirtualminApi;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Dotenv\Dotenv;
 
@@ -14,7 +13,7 @@ class Setup extends TestCase
         $dotenv = new Dotenv();
 
         try {
-            $dotenv->load(__DIR__ . '/../.env');
+            $dotenv->load(__DIR__.'/../.env');
         } catch (Exception $e) {
             return false;
         }
@@ -24,8 +23,9 @@ class Setup extends TestCase
 
     protected function getHostInformation()
     {
-        if (!$this->dotEnvExists()) {
+        if (! $this->dotEnvExists()) {
             $this->assertTrue(true);
+
             return false;
         }
 
@@ -34,7 +34,7 @@ class Setup extends TestCase
             'password' => $_ENV['VIRTUALMIN_PASSWORD'],
         ];
 
-        if (!$host['host']) {
+        if (! $host['host']) {
             return false;
         }
 

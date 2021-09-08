@@ -20,7 +20,7 @@ class VirtualminApiServiceProvider extends ServiceProvider
             return new VirtualminApi([
                 'host'     => $_ENV['VIRTUALMIN_HOST'],
                 'password' => $_ENV['VIRTUALMIN_PASSWORD'],
-                
+
             ], $_ENV['VIRTUALMIN_API_MODE']);
         });
     }

@@ -11,11 +11,7 @@ class VirtualminApiServiceProvider extends ServiceProvider
     }
 
     public function register()
-    {
-        // $this->app->bind('virtualmin-api', function() {
-        //     return new VirtualminApi();
-        // });
-
+    {        
         $this->app->bind('virtualmin-api', function () {
             return new VirtualminApi([
                 'host'     => $_ENV['VIRTUALMIN_HOST'],

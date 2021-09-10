@@ -7,9 +7,6 @@
             "file" : [
                "/etc/webmin/virtual-server/domains/16305800406899"
             ],
-            "match_all_web_sub-domains" : [
-               "No"
-            ],
             "provisioning_for_mysql" : [
                "Local"
             ],
@@ -22,14 +19,14 @@
             "password" : [
                "dVQA3QFI6n1STjU"
             ],
-            "cgi_directory" : [
-               "/home/another-domain/cgi-bin"
+            "user_quota_used" : [
+               "1.3 MiB"
             ],
             "created_on" : [
                "02/Sep/2021 12:54"
             ],
-            "url" : [
-               "http://another-domain.com/"
+            "user_block_quota_used" : [
+               "1340"
             ],
             "plan" : [
                "Other Plan"
@@ -46,20 +43,14 @@
             "provisioning_for_virus" : [
                "Local"
             ],
-            "php_execution_mode" : [
-               "fcgid"
-            ],
             "description" : [
                ""
             ],
             "username" : [
                "another-domain"
             ],
-            "html_directory" : [
-               "/home/another-domain/public_html"
-            ],
             "bandwidth_usage" : [
-               "547.66 MiB"
+               "574.14 MiB"
             ],
             "created_unix_time" : [
                "1630580052"
@@ -73,6 +64,9 @@
             "can_rename_servers" : [
                "Yes"
             ],
+            "server_block_quota" : [
+               "Unlimited"
+            ],
             "contact_address" : [
                "another-domain@another-domain.com"
             ],
@@ -83,7 +77,7 @@
                "None"
             ],
             "bandwidth_byte_usage" : [
-               "574271510"
+               "602031176"
             ],
             "maximum_alias_servers" : [
                "*"
@@ -97,6 +91,9 @@
             "username_for_mysql" : [
                "another-domain"
             ],
+            "server_byte_quota_used" : [
+               "1376256"
+            ],
             "login_permissions" : [
                "Email, FTP and SSH"
             ],
@@ -109,14 +106,14 @@
             "maximum_aliases" : [
                "Unlimited"
             ],
-            "php_max_execution_time" : [
-               "30"
-            ],
             "password_storage" : [
                "Plain text"
             ],
             "password_for_mysql" : [
                "dVQA3QFI6n1STjU"
+            ],
+            "user_byte_quota_used" : [
+               "1372160"
             ],
             "spamassassin_client" : [
                "spamc"
@@ -124,14 +121,11 @@
             "edit_capabilities" : [
                "domain users aliases dbs scripts ip dnsip ssl forward redirect admins spam phpver phpmode mail backup sched restore sharedips catchall allowedhosts passwd spf records disable delete"
             ],
-            "webmail_redirects" : [
-               "Yes"
+            "server_quota_used" : [
+               "1.31 MiB"
             ],
             "id" : [
                "16305800406899"
-            ],
-            "php_version" : [
-               "7.2"
             ],
             "shell_type" : [
                "ssh"
@@ -145,11 +139,8 @@
             "home_directory" : [
                "/home/another-domain"
             ],
-            "default_website_for_ip" : [
-               "Yes"
-            ],
-            "error_log" : [
-               "/var/log/virtualmin/another-domain.com_error_log"
+            "user_block_quota" : [
+               "Unlimited"
             ],
             "template" : [
                "Default Settings"
@@ -184,8 +175,11 @@
             "mailbox_username_prefix" : [
                "another-domain"
             ],
-            "possible_php_execution_modes" : [
-               "mod_php cgi fcgid fpm"
+            "user_quota" : [
+               "Unlimited"
+            ],
+            "server_quota" : [
+               "Unlimited"
             ],
             "ip_address" : [
                "154.119.36.21 (Shared)"
@@ -193,50 +187,41 @@
             "bandwidth_start" : [
                "01/Sep/2021"
             ],
-            "server-side_includes" : [
-               "Global default"
-            ],
             "maximum_databases" : [
                "Unlimited"
             ],
             "allowed_scripts" : [
                "All"
             ],
-            "can_migrate_backups" : [
-               "No"
-            ],
             "provisioning_for_spam" : [
                "Local"
             ],
-            "can_choose_database_names" : [
-               "Yes"
+            "can_migrate_backups" : [
+               "No"
             ],
             "features" : [
-               "unix dir mail web logrotate mysql spam webmin"
+               "unix dir mail mysql spam webmin"
             ],
             "group_name" : [
                "another-domain"
             ],
+            "can_choose_database_names" : [
+               "Yes"
+            ],
             "sub-servers_must_be_under_main_domain" : [
                "No"
             ],
-            "access_log" : [
-               "/var/log/virtualmin/another-domain.com_access_log"
+            "server_block_quota_used" : [
+               "1344"
             ],
             "ssl_candidate_hostnames" : [
                "another-domain.com"
             ],
-            "maximum_mongrel_instances" : [
-               "Unlimited"
-            ],
             "bandwidth_limit" : [
                "Unlimited"
             ],
-            "suexec_for_cgis" : [
-               "enabled"
-            ],
-            "php_fcgid_subprocesses" : [
-               "None"
+            "maximum_mongrel_instances" : [
+               "Unlimited"
             ],
             "sub-servers_cannot_be_under_other_domains" : [
                "No"
@@ -264,6 +249,9 @@
             "password" : [
                "nS8Yl45igD^i"
             ],
+            "user_quota_used" : [
+               "2.6 MiB"
+            ],
             "cgi_directory" : [
                "/home/example/cgi-bin"
             ],
@@ -271,7 +259,10 @@
                "17/Oct/2020 14:46"
             ],
             "lets_encrypt_cert_issued" : [
-               "08/Sep/2021 22:33"
+               "09/Sep/2021 08:18"
+            ],
+            "user_block_quota_used" : [
+               "2672"
             ],
             "url" : [
                "http://example.com/"
@@ -304,7 +295,7 @@
                "/home/example/public_html"
             ],
             "bandwidth_usage" : [
-               "332.05 KiB"
+               "396.94 MiB"
             ],
             "created_unix_time" : [
                "1602938795"
@@ -317,6 +308,9 @@
             ],
             "can_rename_servers" : [
                "Yes"
+            ],
+            "server_block_quota" : [
+               "Unlimited"
             ],
             "contact_address" : [
                "example@example.com"
@@ -331,7 +325,7 @@
                "None"
             ],
             "bandwidth_byte_usage" : [
-               "340029"
+               "416226428"
             ],
             "maximum_alias_servers" : [
                "*"
@@ -345,11 +339,14 @@
             "plan_id" : [
                "0"
             ],
+            "server_byte_quota_used" : [
+               "2637824"
+            ],
             "username_for_mysql" : [
                "example"
             ],
             "login_permissions" : [
-               "Email, FTP and SSH"
+               "Email only"
             ],
             "group_id" : [
                "853"
@@ -369,11 +366,20 @@
             "password_for_mysql" : [
                "nS8Yl45igD^i"
             ],
+            "disabled_at" : [
+               "09/Sep/2021 08:24"
+            ],
+            "user_byte_quota_used" : [
+               "2736128"
+            ],
             "spamassassin_client" : [
                "spamc"
             ],
             "edit_capabilities" : [
                "users aliases redirect phpver mail backup sched restore passwd"
+            ],
+            "server_quota_used" : [
+               "2.51 MiB"
             ],
             "ssl_key_file" : [
                "/home/example/ssl.key"
@@ -388,7 +394,7 @@
                "7.2"
             ],
             "shell_type" : [
-               "ssh"
+               "nologin"
             ],
             "bandwidth_byte_limit" : [
                "Unlimited"
@@ -396,20 +402,23 @@
             "allowed_mysql_hosts" : [
                "localhost"
             ],
+            "default_website_for_ip" : [
+               "Yes"
+            ],
             "home_directory" : [
                "/home/example"
             ],
-            "default_website_for_ip" : [
-               "No"
-            ],
             "error_log" : [
                "/var/log/virtualmin/example.com_error_log"
+            ],
+            "user_block_quota" : [
+               "Unlimited"
             ],
             "template" : [
                "Default Settings"
             ],
             "shell_command" : [
-               "/bin/sh"
+               "/dev/null"
             ],
             "read-only_mode" : [
                "No"
@@ -429,6 +438,9 @@
             "sub-servers_inherit_ip_address" : [
                "No"
             ],
+            "disabled" : [
+               "Manually (disabled as a test for the api)"
+            ],
             "plugins" : [
                ""
             ],
@@ -445,8 +457,14 @@
                "usermin",
                "postfix"
             ],
+            "server_quota" : [
+               "Unlimited"
+            ],
+            "user_quota" : [
+               "Unlimited"
+            ],
             "possible_php_execution_modes" : [
-               "mod_php cgi fcgid fpm"
+               "cgi fcgid fpm"
             ],
             "ip_address" : [
                "154.119.36.21 (Shared)"
@@ -490,6 +508,9 @@
             "ssl_candidate_hostnames" : [
                "example.com www.example.com"
             ],
+            "server_block_quota_used" : [
+               "2576"
+            ],
             "lets_encrypt_renewal" : [
                "Enabled"
             ],
@@ -504,6 +525,203 @@
             ],
             "php_fcgid_subprocesses" : [
                "None"
+            ],
+            "sub-servers_cannot_be_under_other_domains" : [
+               "No"
+            ]
+         }
+      },
+      {
+         "name" : "vmcopper.snowballeffect.net",
+         "values" : {
+            "file" : [
+               "/etc/webmin/virtual-server/domains/163116512115577"
+            ],
+            "provisioning_for_mysql" : [
+               "Local"
+            ],
+            "provisioning_for_dns" : [
+               "Local"
+            ],
+            "password" : [
+               "7hK3y22PPKQe6UH"
+            ],
+            "user_quota_used" : [
+               "1.3 MiB"
+            ],
+            "created_on" : [
+               "09/Sep/2021 07:25"
+            ],
+            "user_block_quota_used" : [
+               "1336"
+            ],
+            "plan" : [
+               "Default Plan"
+            ],
+            "allowed_features" : [
+               "mail web webalizer mysql spam webmin"
+            ],
+            "maximum_sub-servers" : [
+               "Unlimited"
+            ],
+            "maximum_mailboxes" : [
+               "Unlimited"
+            ],
+            "provisioning_for_virus" : [
+               "Local"
+            ],
+            "description" : [
+               ""
+            ],
+            "username" : [
+               "vmcopper3"
+            ],
+            "bandwidth_usage" : [
+               "402.31 KiB"
+            ],
+            "created_unix_time" : [
+               "1631165129"
+            ],
+            "user_id" : [
+               "2110"
+            ],
+            "created_by" : [
+               "root"
+            ],
+            "can_rename_servers" : [
+               "Yes"
+            ],
+            "server_block_quota" : [
+               "Unlimited"
+            ],
+            "contact_address" : [
+               "vmcopper3@vmcopper.snowballeffect.net"
+            ],
+            "bandwidth_byte_usage" : [
+               "411969"
+            ],
+            "maximum_alias_servers" : [
+               "*"
+            ],
+            "template_id" : [
+               "0"
+            ],
+            "plan_id" : [
+               "0"
+            ],
+            "server_byte_quota_used" : [
+               "1368064"
+            ],
+            "login_permissions" : [
+               "Email, FTP and SSH"
+            ],
+            "group_id" : [
+               "856"
+            ],
+            "contact_email" : [
+               "vmcopper3@vmcopper.snowballeffect.net"
+            ],
+            "maximum_aliases" : [
+               "Unlimited"
+            ],
+            "password_storage" : [
+               "Plain text"
+            ],
+            "user_byte_quota_used" : [
+               "1368064"
+            ],
+            "server_quota_used" : [
+               "1.3 MiB"
+            ],
+            "edit_capabilities" : [
+               "users aliases redirect phpver mail backup sched restore passwd"
+            ],
+            "id" : [
+               "163116512115577"
+            ],
+            "bandwidth_byte_limit" : [
+               "Unlimited"
+            ],
+            "shell_type" : [
+               "ssh"
+            ],
+            "home_directory" : [
+               "/home/vmcopper3"
+            ],
+            "user_block_quota" : [
+               "Unlimited"
+            ],
+            "template" : [
+               "Default Settings"
+            ],
+            "read-only_mode" : [
+               "No"
+            ],
+            "shell_command" : [
+               "/bin/sh"
+            ],
+            "maximum_non-alias_servers" : [
+               "*"
+            ],
+            "type" : [
+               "Top-level server"
+            ],
+            "plugins" : [
+               ""
+            ],
+            "sub-servers_inherit_ip_address" : [
+               "No"
+            ],
+            "mailbox_username_prefix" : [
+               "vmcopper3"
+            ],
+            "user_quota" : [
+               "Unlimited"
+            ],
+            "server_quota" : [
+               "Unlimited"
+            ],
+            "ip_address" : [
+               "154.119.36.21 (Shared)"
+            ],
+            "bandwidth_start" : [
+               "01/Sep/2021"
+            ],
+            "maximum_databases" : [
+               "Unlimited"
+            ],
+            "provisioning_for_spam" : [
+               "Local"
+            ],
+            "can_migrate_backups" : [
+               "No"
+            ],
+            "allowed_scripts" : [
+               "phpmyadmin roundcube squirrelmail"
+            ],
+            "features" : [
+               "unix dir webmin"
+            ],
+            "group_name" : [
+               "vmcopper3"
+            ],
+            "can_choose_database_names" : [
+               "Yes"
+            ],
+            "sub-servers_must_be_under_main_domain" : [
+               "No"
+            ],
+            "server_block_quota_used" : [
+               "1336"
+            ],
+            "ssl_candidate_hostnames" : [
+               "vmcopper.snowballeffect.net"
+            ],
+            "bandwidth_limit" : [
+               "Unlimited"
+            ],
+            "maximum_mongrel_instances" : [
+               "Unlimited"
             ],
             "sub-servers_cannot_be_under_other_domains" : [
                "No"

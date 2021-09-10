@@ -94,6 +94,6 @@ class ApiTest extends Setup
 
         $result = $api->getDomains();
 
-        $this->assertCount(2, $result);
+        $this->assertCount(3, $result);
     }
 }

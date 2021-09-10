@@ -3,13 +3,12 @@
 namespace FintechSystems\VirtualminApi\Tests;
 
 use Exception;
+use FintechSystems\VirtualminApi\VirtualminApi;
 use PHPUnit\Framework\TestCase;
 use Symfony\Component\Dotenv\Dotenv;
-use FintechSystems\VirtualminApi\Api;
-use FintechSystems\VirtualminApi\VirtualminApi;
 
 class VirtualminApiTest extends TestCase
-{    
+{
     /** @test */
     public function it_can_read_the_env_file_and_assign_it_to_an_array()
     {
@@ -56,5 +55,4 @@ class VirtualminApiTest extends TestCase
 
         ray($result);
     }
-    
 }

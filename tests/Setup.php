@@ -13,7 +13,7 @@ class Setup extends TestCase
     // public function __construct() {
     //     $this->host = $this->getHostInformation();
     // }
-    
+
     private function dotEnvExists()
     {
         $dotenv = new Dotenv();

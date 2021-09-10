@@ -3,7 +3,7 @@
 namespace FintechSystems\VirtualminApi;
 
 /**
- * An API that provides calls to Virtualmin 
+ * An API that provides calls to Virtualmin.
  */
 class VirtualminApi
 {
@@ -34,19 +34,19 @@ class VirtualminApi
     }
 
     /**
-     * Format the raw output from the Virtualmin list-domains program into a more user-friendly format
+     * Format the raw output from the Virtualmin list-domains program into a more user-friendly format.
      */
     public function getDomains()
     {
         $output = json_decode($this->listDomains());
 
-        foreach($output->data as $domain) {
+        foreach ($output->data as $domain) {
             $domains[] = [
                 'name' => $domain->name,
                 'plan' => $domain->values->plan[0],
                 'disk_space_used' => $domain->values->server_byte_quota_used[0] ?? 0,
                 'server' => $this->host['host'],
-                'status' => (isset($domain->values->disabled) ? 'suspended' : 'active')
+                'status' => (isset($domain->values->disabled) ? 'suspended' : 'active'),
             ];
         }
 
@@ -54,7 +54,7 @@ class VirtualminApi
     }
 
     /**
-     * Run the Virtualmin list-domains command and return the output
+     * Run the Virtualmin list-domains command and return the output.
      */
     public function listDomains()
     {

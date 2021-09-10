@@ -6,7 +6,7 @@ use Illuminate\Support\ServiceProvider;
 
 class VirtualminApiServiceProvider extends ServiceProvider
 {
-    public function root()
+    public function boot()
     {
     }
 

@@ -5,13 +5,46 @@ A Virtualmin API designed to run standalone or as part of a Laravel Application
 
 Features:
 
-- Auditing
+- List Domains (Virtualmin output)
+- Get Domains (User-Friendly Output)
+
+## Get Domains
+
+Usage:
+
+```php
+$api = new VirtualminApi;
+$api->getDomains();
+```
+
+```php
+VirtualminApi::getDomains();
+```
+
+Output:
+
+Array of all domains on a Virtualmin server.
+
+## Change Plan
+
+Usage:
+
+```php
+$api = new VirtualminApi;
+$api->changePlan('example.com', 'New Plan Name);
+```
+
+```php
+VirtualminApi::changePlan('example.com', 'New Plan Name);
+```
 
 # Testing
 
-We have tests!
+We have tests! Use the command below to run the tests.
 
-vendor/bin/phpunit
+Live API calls will be made otherwise causing your tests to fail.
+
+`vendor/bin/phpunit --exclude-group=live`
 
 ## Coverage reports
 
@@ -45,7 +78,7 @@ For local editing, add this to `composer.json`:
 This standalone package was inspired by video course by Marcel Pociot of BeyondCode:<br>
 [PHP Package Development](https://beyondco.de/video-courses/php-package-development)
 
-Before doing the video course I had developed many version of the same thing but it was never standalone and as a consequence over the years it was difficult to maintain.
+Before doing the video course I had developed many versions of the same thing but it was never standalone and as a consequence over the years it was difficult to maintain and quickly use in new projects.
 
 # License
 

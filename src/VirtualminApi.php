@@ -2,17 +2,20 @@
 
 namespace FintechSystems\VirtualminApi;
 
+/**
+ * An API that provides calls to Virtualmin 
+ */
 class VirtualminApi
 {
     private $host;
 
     /**
-     * Mode can be debug or cache.
+     * Mode can be debug, write_cache or read_cache.
      */
     private $mode;
 
     /**
-     * By default Wget won't produce output because of this flag. For debugging, we clear it.
+     * Wget won't produce output if this flag is set. For debugging, we clear it.
      */
     private $quiet = '--quiet';
 
@@ -30,12 +33,30 @@ class VirtualminApi
         }
     }
 
+    /**
+     * Format the raw output from the Virtualmin list-domains program into a more user-friendly format
+     */
     public function getDomains()
     {
-        return json_decode($this->listDomains());
+        $output = json_decode($this->listDomains());
+
+        foreach($output->data as $domain) {
+            $domains[] = [
+                'name' => $domain->name,
+                'plan' => $domain->values->plan[0],
+                'disk_space_used' => $domain->values->server_byte_quota_used[0] ?? 0,
+                'server' => $this->host['host'],
+                'status' => (isset($domain->values->disabled) ? 'suspended' : 'active')
+            ];
+        }
+
+        return $domains;
     }
 
-    private function listDomains()
+    /**
+     * Run the Virtualmin list-domains command and return the output
+     */
+    public function listDomains()
     {
         $program = 'list-domains';
 
@@ -61,7 +82,7 @@ class VirtualminApi
             $command
         );
 
-        if ($this->mode == 'write_cache') {
+        if ($this->mode == 'write_cache' && $result) {
             file_put_contents('storage/'.$program.'.json', $result);
         }
 

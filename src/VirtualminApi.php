@@ -47,7 +47,7 @@ class VirtualminApi
         foreach ($output->data as $domain) {
             $domains[] = [
                 'name'             => $domain->name,
-                'type'             => $this->getHostingType($domain),                
+                'type'             => $this->getHostingType($domain),
                 'server'           => $this->server['hostname'],
                 'username'         => $domain->values->username[0] ?? '',
                 'password'         => $domain->values->password[0] ?? '',
@@ -76,26 +76,26 @@ class VirtualminApi
     private function getBandwidthLimit($domain)
     {
         if (isset($domain->values->bandwidth_byte_limit)) {
-
             if ($domain->values->bandwidth_byte_limit[0] == 'Unlimited') {
                 return -1;
             }
 
             return $domain->values->bandwidth_byte_limit[0];
         }
+
         return null;
     }
 
     private function getDiskSpaceLimit($domain)
     {
         if (isset($domain->values->server_block_quota)) {
-
             if ($domain->values->server_block_quota[0] == 'Unlimited') {
                 return -1;
             }
 
             return $domain->values->server_block_quota[0];
         }
+
         return null;
     }
 
@@ -105,13 +105,14 @@ class VirtualminApi
     private function getHostingType($domain): ?string
     {
         if (isset($domain->values->type)) { // TODO PHP 8.0 provides shortcut for this
-            if ($domain->values->type[0] == "Top-level server") {
-                return "Web Hosting";
+            if ($domain->values->type[0] == 'Top-level server') {
+                return 'Web Hosting';
             }
-            if ($domain->values->type[0] == "Sub-server") {
-                return "Subdomain";
+            if ($domain->values->type[0] == 'Sub-server') {
+                return 'Subdomain';
             }
         }
+
         return null;
     }
 
@@ -120,7 +121,7 @@ class VirtualminApi
         $hostname = $this->server['hostname'];
         $username = $this->server['username'] ?? 'root';
         $password = $this->server['password'];
-        $port     = $this->server['port'] ?? '10000';
+        $port = $this->server['port'] ?? '10000';
 
         ray('runProgram server', $this->server);
 
@@ -128,7 +129,7 @@ class VirtualminApi
         $command = "wget --timeout=1800 -O - $this->quiet --http-user='$username' --http-passwd='$password' --no-check-certificate 'https://$hostname:$port/virtual-server/remote.cgi?json=1&multiline&program=$program'";
 
         if ($this->mode == 'read_cache') {
-            return file_get_contents('storage/' . $program . '.json');
+            return file_get_contents('storage/'.$program.'.json');
         }
 
         ray()->measure();
@@ -138,7 +139,7 @@ class VirtualminApi
         ray()->measure();
 
         if ($this->mode == 'write_cache' && $result) {
-            file_put_contents('storage/' . $program . '.json', $result);
+            file_put_contents('storage/'.$program.'.json', $result);
         }
 
         return $result;

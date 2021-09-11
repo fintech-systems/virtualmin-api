@@ -27,7 +27,7 @@ class Setup extends TestCase
         return true;
     }
 
-    protected function getHostInformation()
+    protected function getServerInformation()
     {
         if (! $this->dotEnvExists()) {
             $this->assertTrue(true);
@@ -35,15 +35,16 @@ class Setup extends TestCase
             return false;
         }
 
-        $host = [
-            'host'     => $_ENV['VIRTUALMIN_HOST'],
-            'password' => $_ENV['VIRTUALMIN_PASSWORD'],
+        $server = [
+            'hostname' => env('VIRTUALMIN_HOSTNAME'),
+            'username' => env('VIRTUALMIN_USERNAME'),
+            'password' => env('VIRTUALMIN_PASSWORD'),
         ];
 
-        if (! $host['host']) {
+        if (! $server['hostname']) {
             return false;
         }
 
-        return $host;
+        return $server;
     }
 }

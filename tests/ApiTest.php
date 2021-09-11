@@ -13,27 +13,27 @@ class ApiTest extends Setup
         $dotenv = new Dotenv();
         $dotenv->load(__DIR__.'/../.env.testing');
 
-        $host = [
-            'host'     => $_ENV['VIRTUALMIN_HOST'],
+        $hostname = [
+            'hostname' => $_ENV['VIRTUALMIN_HOSTNAME'],
             'password' => $_ENV['VIRTUALMIN_PASSWORD'],
         ];
 
-        $this->assertEquals('hostname.example.com', $host['host']);
+        $this->assertEquals('hostname.example.com', $hostname['hostname']);
     }
 
     /**
      * @test
      * @group live
      */
-    public function it_retrieves_a_list_of_domains_on_a_live_server()
+    public function it_retrieves_a_list_of_domains_on_a_live_server_and_shows_debugging_information()
     {
-        if (! $host = $this->getHostInformation()) {
+        if (! $server = $this->getServerInformation()) {
             $this->assertTrue(true);
 
             return;
         }
 
-        $api = new VirtualminApi($host, 'debug');
+        $api = new VirtualminApi($server, 'debug');
 
         $result = json_decode($api->listDomains());
 
@@ -46,13 +46,13 @@ class ApiTest extends Setup
      */
     public function it_retrieves_a_list_of_domains_on_a_live_server_and_saves_it_as_a_file()
     {
-        if (! $host = $this->getHostInformation()) {
+        if (! $server = $this->getServerInformation()) {
             $this->assertTrue(true);
 
             return;
         }
 
-        $api = new VirtualminApi($host, 'write_cache');
+        $api = new VirtualminApi($server, 'write_cache');
 
         $result = json_decode($api->listDomains());
 
@@ -72,13 +72,13 @@ class ApiTest extends Setup
     /** @test */
     public function it_retrieves_a_cached_response_for_list_domains_from_the_virtualmin_api()
     {
-        if (! $host = $this->getHostInformation()) {
+        if (! $server = $this->getServerInformation()) {
             $this->assertTrue(true);
 
             return;
         }
 
-        $api = new VirtualminApi($host, 'read_cache');
+        $api = new VirtualminApi($server, 'read_cache');
 
         $result = json_decode($api->listDomains());
 
@@ -88,16 +88,18 @@ class ApiTest extends Setup
     /** @test */
     public function it_flattens_a_virtualmin_api_list_domains_command_and_returns_domains_ips_usernames_plans_and_statuses()
     {
-        if (! $host = $this->getHostInformation()) {
+        if (! $server = $this->getServerInformation()) {
             $this->assertTrue(true);
 
             return;
         }
 
-        $api = new VirtualminApi($host, 'read_cache');
+        $api = new VirtualminApi($server, 'read_cache');
 
         $result = $api->getDomains();
 
-        $this->assertCount(3, $result);
+//        dd($result);
+
+        $this->assertCount(6, $result);
     }
 }

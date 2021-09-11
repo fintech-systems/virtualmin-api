@@ -25,7 +25,8 @@ Homestead.json
 .phpunit.result.cache
 
 ## Customizations
-## /build is created during 
+## /build is created by phpunit
 /build/
 phpunit.xml.dist.bak
 coverage.xml
+/.idea

@@ -1,7 +1,12 @@
 # Virtualmin API
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/fintech-systems/virtualmin-api) [![Build Status](https://app.travis-ci.com/fintech-systems/virtualmin-api.svg?branch=main)](https://app.travis-ci.com/fintech-systems/virtualmin-api) ![Codecov branch](https://img.shields.io/codecov/c/github/fintech-systems/virtualmin-api/main) ![GitHub](https://img.shields.io/github/license/fintech-systems/virtualmin-api)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/fintech-systems/virtualmin-api) [![Build Status](https://app.travis-ci.com/fintech-systems/virtualmin-api.svg?branch=main)](https://app.travis-ci.com/fintech-systems/virtualmin-api) ![GitHub](https://img.shields.io/github/license/fintech-systems/virtualmin-api)
 
 A Virtualmin API designed to run standalone or as part of a Laravel Application
+
+Requirements:
+
+- PHP 8.0
+- A running Virtualmin server
 
 Features:
 
@@ -10,12 +15,15 @@ Features:
 
 ## Get Domains
 
-Usage:
+Framework Agnostic PHP:
 
 ```php
 $api = new VirtualminApi;
 $api->getDomains();
 ```
+
+Laravel App:
+
 
 ```php
 VirtualminApi::getDomains();
@@ -27,12 +35,14 @@ Array of all domains on a Virtualmin server.
 
 ## Change Plan
 
-Usage:
+Framework Agnostic PHP:
 
 ```php
 $api = new VirtualminApi;
 $api->changePlan('example.com', 'New Plan Name);
 ```
+
+Laravel App:
 
 ```php
 VirtualminApi::changePlan('example.com', 'New Plan Name);
@@ -53,6 +63,9 @@ To regenerate coverage reports:
 `XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-html=tests/coverage-report`
 
 See also `.travis.yml`
+
+We have a badge for Coverage but it's problematic due to Github issues:<br>
+![Codecov branch](https://img.shields.io/codecov/c/github/fintech-systems/virtualmin-api/main) 
 
 ## Version Control
 

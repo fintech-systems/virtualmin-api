@@ -113,7 +113,7 @@ class ApiTest extends Setup
         $api = new VirtualminApi($server, 'write_cache');
 
         $result = json_decode($api->listPlans());
-        
+
         $this->assertCount(2, $result->data);
     }
 
@@ -131,7 +131,7 @@ class ApiTest extends Setup
         $result = $api->getPlans();
 
         // dd($result);
-        
+
         $this->assertCount(2, $result);
     }
 }

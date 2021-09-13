@@ -1,0 +1,134 @@
+{
+   "status" : "success",
+   "data" : [
+      {
+         "name" : "16305799385998",
+         "values" : {
+            "maximum_alias" : [
+               "Unlimited"
+            ],
+            "server_block_quota" : [
+               "204800"
+            ],
+            "edit_capabilities" : [
+               "Automatic"
+            ],
+            "maximum_mailbox" : [
+               "Unlimited"
+            ],
+            "maximum_doms" : [
+               "Unlimited"
+            ],
+            "server_quota" : [
+               "200 MiB"
+            ],
+            "maximum_dbs" : [
+               "Unlimited"
+            ],
+            "allowed_features" : [
+               "Automatic"
+            ],
+            "can_create_sub-servers_under_any_domain" : [
+               "Yes"
+            ],
+            "allowed_scripts" : [
+               "All"
+            ],
+            "administrator_block_quota" : [
+               "Unlimited"
+            ],
+            "can_migrate_backups" : [
+               "No"
+            ],
+            "can_choose_database_names" : [
+               "Yes"
+            ],
+            "resellers" : [
+               "All"
+            ],
+            "name" : [
+               "Limited Plan"
+            ],
+            "can_rename_domains" : [
+               "Yes"
+            ],
+            "maximum_bw" : [
+               "209715200"
+            ],
+            "can_create_sub-servers_under_other_domains" : [
+               "No"
+            ],
+            "maximum_aliasdoms" : [
+               "Unlimited"
+            ],
+            "maximum_realdoms" : [
+               "Unlimited"
+            ]
+         }
+      },
+      {
+         "name" : "0",
+         "values" : {
+            "maximum_alias" : [
+               "Unlimited"
+            ],
+            "server_block_quota" : [
+               "Unlimited"
+            ],
+            "edit_capabilities" : [
+               "users aliases redirect phpver mail backup sched restore passwd"
+            ],
+            "maximum_mailbox" : [
+               "Unlimited"
+            ],
+            "maximum_doms" : [
+               "Unlimited"
+            ],
+            "maximum_dbs" : [
+               "Unlimited"
+            ],
+            "allowed_features" : [
+               "web mysql mail spam webalizer webmin"
+            ],
+            "can_create_sub-servers_under_any_domain" : [
+               "Yes"
+            ],
+            "allowed_scripts" : [
+               "phpmyadmin roundcube squirrelmail"
+            ],
+            "administrator_block_quota" : [
+               "Unlimited"
+            ],
+            "can_migrate_backups" : [
+               "No"
+            ],
+            "can_choose_database_names" : [
+               "Yes"
+            ],
+            "resellers" : [
+               "All"
+            ],
+            "name" : [
+               "Unlimited Plan"
+            ],
+            "can_rename_domains" : [
+               "Yes"
+            ],
+            "maximum_bw" : [
+               "Unlimited"
+            ],
+            "can_create_sub-servers_under_other_domains" : [
+               "No"
+            ],
+            "maximum_aliasdoms" : [
+               "Unlimited"
+            ],
+            "maximum_realdoms" : [
+               "Unlimited"
+            ]
+         }
+      }
+   ],
+   "command" : "list-plans"
+}
+

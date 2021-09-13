@@ -98,8 +98,40 @@ class ApiTest extends Setup
 
         $result = $api->getDomains();
 
-//        dd($result);
-
         $this->assertCount(6, $result);
+    }
+
+    /** @test */
+    public function it_returns_all_plans_from_a_server_and_writes_them_to_disk()
+    {
+        if (! $server = $this->getServerInformation()) {
+            $this->assertTrue(true);
+
+            return;
+        }
+
+        $api = new VirtualminApi($server, 'write_cache');
+
+        $result = json_decode($api->listPlans());
+        
+        $this->assertCount(2, $result->data);
+    }
+
+    /** @test */
+    public function it_returns_virtualmin_plans_in_an_user_friendly_format()
+    {
+        if (! $server = $this->getServerInformation()) {
+            $this->assertTrue(true);
+
+            return;
+        }
+
+        $api = new VirtualminApi($server, 'read_cache');
+
+        $result = $api->getPlans();
+
+        // dd($result);
+        
+        $this->assertCount(2, $result);
     }
 }

@@ -17,7 +17,7 @@
                "Local"
             ],
             "user_quota_used" : [
-               "2.33 MiB"
+               "2.34 MiB"
             ],
             "cgi_directory" : [
                "/home/disabled-domain/cgi-bin"
@@ -26,7 +26,7 @@
                "11/Sep/2021 10:55"
             ],
             "user_block_quota_used" : [
-               "2396"
+               "2404"
             ],
             "url" : [
                "http://disabled-domain.example.com/"
@@ -59,7 +59,7 @@
                "/home/disabled-domain/public_html"
             ],
             "bandwidth_usage" : [
-               "968.01 KiB"
+               "34.97 MiB"
             ],
             "created_unix_time" : [
                "1631350537"
@@ -86,7 +86,7 @@
                "/home/disabled-domain/ssl.cert"
             ],
             "bandwidth_byte_usage" : [
-               "991250"
+               "36676476"
             ],
             "maximum_alias_servers" : [
                "*"
@@ -125,7 +125,7 @@
                "11/Sep/2021 10:55"
             ],
             "user_byte_quota_used" : [
-               "2453504"
+               "2461696"
             ],
             "edit_capabilities" : [
                "users aliases redirect phpver mail backup sched restore passwd"
@@ -359,6 +359,9 @@
             "template_id" : [
                "0"
             ],
+            "ssl_cert_expiry" : [
+               "10/Sep/2026 10:58"
+            ],
             "plan_id" : [
                "0"
             ],
@@ -538,7 +541,7 @@
                "Local"
             ],
             "user_quota_used" : [
-               "1.37 MiB"
+               "1.38 MiB"
             ],
             "cgi_directory" : [
                "/home/restricted-plan/cgi-bin"
@@ -547,7 +550,7 @@
                "11/Sep/2021 11:01"
             ],
             "user_block_quota_used" : [
-               "1412"
+               "1420"
             ],
             "url" : [
                "http://restricted-plan.example.com/"
@@ -579,6 +582,9 @@
             "html_directory" : [
                "/home/restricted-plan/public_html"
             ],
+            "bandwidth_usage" : [
+               "0 bytes"
+            ],
             "created_unix_time" : [
                "1631350888"
             ],
@@ -603,17 +609,23 @@
             "ssl_cert_file" : [
                "/home/restricted-plan/ssl.cert"
             ],
+            "bandwidth_byte_usage" : [
+               "0"
+            ],
             "maximum_alias_servers" : [
                "*"
             ],
             "template_id" : [
                "0"
             ],
+            "ssl_cert_expiry" : [
+               "10/Sep/2026 11:01"
+            ],
             "plan_id" : [
                "16305799385998"
             ],
             "server_byte_quota_used" : [
-               "1441792"
+               "1449984"
             ],
             "login_permissions" : [
                "Email, FTP and SSH"
@@ -634,13 +646,13 @@
                "Hashed"
             ],
             "user_byte_quota_used" : [
-               "1445888"
+               "1454080"
             ],
             "edit_capabilities" : [
                "domain users aliases dbs scripts ip dnsip ssl forward redirect admins spam phpver phpmode mail backup sched restore sharedips catchall allowedhosts passwd spf records disable delete"
             ],
             "server_quota_used" : [
-               "1.37 MiB"
+               "1.38 MiB"
             ],
             "ssl_key_file" : [
                "/home/restricted-plan/ssl.key"
@@ -716,6 +728,9 @@
             "maximum_databases" : [
                "Unlimited"
             ],
+            "bandwidth_start" : [
+               "01/Sep/2021"
+            ],
             "server-side_includes" : [
                "Global default"
             ],
@@ -744,7 +759,7 @@
                "/var/log/virtualmin/restricted-plan.example.com_access_log"
             ],
             "server_block_quota_used" : [
-               "1408"
+               "1416"
             ],
             "ssl_candidate_hostnames" : [
                "restricted-plan.example.com"
@@ -1283,6 +1298,9 @@
             ],
             "template_id" : [
                "0"
+            ],
+            "ssl_cert_expiry" : [
+               "10/Dec/2021 10:00"
             ],
             "plan_id" : [
                "0"

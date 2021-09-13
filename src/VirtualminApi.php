@@ -46,9 +46,9 @@ class VirtualminApi
 
         foreach ($output->data as $domain) {
             $domains[] = [
-                'name'             => $domain->name,
-                'type'             => $this->getHostingType($domain),                
                 'server'           => $this->server['hostname'],
+                'name'             => $domain->name,
+                'type'             => $this->getHostingType($domain),                                
                 'username'         => $domain->values->username[0] ?? '',
                 'password'         => $domain->values->password[0] ?? '',
                 'plan'             => $domain->values->plan[0],
@@ -64,11 +64,43 @@ class VirtualminApi
     }
 
     /**
+     * Format the raw output from the Virtualmin list-plans program into a more user-friendly format.
+     */
+    public function getPlans(): array
+    {
+        $plans = [];
+
+        $output = json_decode($this->listPlans());
+
+        foreach ($output->data as $plan) {
+            $plans[] = [
+                'server'            => $this->server['hostname'],
+                'remote_id'         => $plan->name,
+                'name'              => $plan->values->name[0],
+                'disk_space_limit'  => $plan->values->server_block_quota[0],
+                'bandwidth_limited' => $plan->values->maximum_bw[0],
+            ];
+        }
+
+        return $plans;
+    }
+
+    /**
      * Run the Virtualmin list-domains command and return the output.
      */
     public function listDomains()
     {
         $program = 'list-domains';
+
+        return $this->runProgram($program);
+    }
+
+    /**
+     * Run the Virtualmin list-domains command and return the output.
+     */
+    public function listPlans()
+    {
+        $program = 'list-plans';
 
         return $this->runProgram($program);
     }

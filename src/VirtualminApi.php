@@ -157,17 +157,26 @@ class VirtualminApi
 
         ray('runProgram server', $this->server);
 
-        // `-O -` means documents will be printed to standard output. See man wget /-O
-        $command = "wget --timeout=1800 -O - $this->quiet --http-user='$username' --http-passwd='$password' --no-check-certificate 'https://$hostname:$port/virtual-server/remote.cgi?json=1&multiline&program=$program'";
-
         if ($this->mode == 'read_cache') {
             return file_get_contents('storage/'.$program.'.json');
         }
+        $url = "https://$hostname/virtual-server/remote.cgi?json=1&multiline&program=$program";
+
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL,            $url);
+        curl_setopt($ch, CURLOPT_PORT,           $port);
+        curl_setopt($ch, CURLOPT_HTTPHEADER,     [
+            'Authorization: Basic ' . base64_encode($username . ':' . $password)
+        ]);
+
+        curl_setopt($ch, CURLOPT_HTTP_VERSION,   CURL_HTTP_VERSION_1_1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_TIMEOUT,        1800);
+        curl_setopt($ch, CURLOPT_VERBOSE,        empty($this->quiet));
 
         ray()->measure();
-        $result = shell_exec(
-            $command
-        );
+        $result = curl_exec($ch);
         ray()->measure();
 
         if ($this->mode == 'write_cache' && $result) {

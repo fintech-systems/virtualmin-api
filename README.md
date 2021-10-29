@@ -18,7 +18,8 @@ Features:
 Framework Agnostic PHP:
 
 ```php
-$api = new VirtualminApi;
+use \FintechSystems\VirtualminApi\VirtualminApi;
+$api = new VirtualminApi('hostname' => 'virtualmin.test', 'username' => 'root', 'password' => '********');
 $api->getDomains();
 ```
 

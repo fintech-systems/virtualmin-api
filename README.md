@@ -97,18 +97,17 @@ For local editing, add this to `composer.json`:
         }
     ]
 ```
-
 ## Credits
+
+- [Eugene van der Merwe](https://github.com/eugenevdm)
+- [Fabio Montefuscolo](https://github.com/fabiomontefuscolo)
+
+## Inspiration
 
 This standalone package was inspired by video course by Marcel Pociot of BeyondCode:<br>
 [PHP Package Development](https://beyondco.de/video-courses/php-package-development)
 
 Before doing the video course I had developed many versions of the same thing but it was never standalone and as a consequence over the years it was difficult to maintain and quickly use in new projects.
-
-## Credits
-
-- [Eugene van der Merwe](https://github.com/eugenevdm)
-- [Fabio Montefuscolo](https://github.com/fabiomontefuscolo)
 
 ## License
 

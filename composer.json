@@ -5,20 +5,18 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "FintechSystems\\VirtualminApi\\": "src/",
-            "Mpociot\\ChuckNorrisJokes\\": "src/"
+            "FintechSystems\\VirtualminApi\\": "src/"            
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "FintechSystems\\VirtualminApi\\Tests\\": "tests",
-            "Mpociot\\ChuckNorrisJokes\\Tests\\": "tests"
+            "FintechSystems\\VirtualminApi\\Tests\\": "tests"
         }
     },
     "authors": [
         {
             "name": "Eugene van der Merwe",
-            "email": "eugenevdm@gmail.com"
+            "email": "eugene@fintechsystems.net"
         }
     ],
     "require": {

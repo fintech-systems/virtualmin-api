@@ -72,9 +72,6 @@ To regenerate coverage reports:
 
 See also `.travis.yml`
 
-We have a badge for Coverage but it's problematic due to Github issues:<br>
-![Codecov branch](https://img.shields.io/codecov/c/github/fintech-systems/virtualmin-api/main) 
-
 ## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

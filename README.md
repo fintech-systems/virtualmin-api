@@ -15,6 +15,7 @@ Features:
 - Change Plan
 - List Plans (Virtualmin output)
 - Get Plans (User-Friendly Output)
+- Create Domain
 
 ## Get Domains
 
@@ -54,6 +55,29 @@ Laravel App:
 
 ```php
 VirtualminApi::changePlan('example.com', 'New Plan Name);
+```
+
+## Create Domain
+
+Example:
+
+```php
+$api->createDomain([
+    // New virtual server details
+    'domain'                 => 'demo.example.com',
+    'desc'                   => 'My demo website',
+    'pass'                   => '***************',
+    'template'               => 'WikiSuite 1',
+    'plan'                   => 'WikiSuite 1',
+    
+    // Advanced options
+    'email'                  => 'contact@example.com',
+    'db'                     => 'demo_example_com',
+    
+    // Enabled features
+    'features-from-plan'     => '',
+    'virtualmin-tikimanager' => ''
+]))
 ```
 
 ## Testing

@@ -105,6 +105,26 @@ class VirtualminApi
         return $this->runProgram($program);
     }
 
+    /**
+     * Adds a new Virtualmin virtual server, with the settings and features specified on the command line.
+     */
+    public function createDomain($info = [])
+    {
+        $program = 'create-domain';
+
+        return $this->runProgram($program, $info);
+    }
+
+    /**
+     * Deletes an existing Virtualmin virtual server and all sub-servers, mailboxes and alias domains.
+     */
+    public function deleteDomain($info = [])
+    {
+        $program = 'delete-domain';
+
+        return $this->runProgram($program, $info);
+    }
+
     private function getBandwidthLimit($domain)
     {
         if (isset($domain->values->bandwidth_byte_limit)) {
@@ -148,7 +168,7 @@ class VirtualminApi
         return null;
     }
 
-    private function runProgram($program)
+    private function runProgram($program, $data = null)
     {
         $hostname = $this->server['hostname'];
         $username = $this->server['username'] ?? 'root';
@@ -161,6 +181,10 @@ class VirtualminApi
             return file_get_contents('storage/'.$program.'.json');
         }
         $url = "https://$hostname/virtual-server/remote.cgi?json=1&multiline&program=$program";
+
+        if (is_array($data) && ! empty($data)) {
+            $url .= '&'.http_build_query($data);
+        }
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);

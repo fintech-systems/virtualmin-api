@@ -6,7 +6,7 @@ A Virtualmin API designed to run standalone or as part of a Laravel Application
 Requirements:
 
 - PHP 8.0
-- A running Virtualmin server
+- A running Virtualmin server, using the [Remote API](https://www.virtualmin.com/documentation/developer/http/)
 
 Features:
 
@@ -129,6 +129,10 @@ This standalone package was inspired by video course by Marcel Pociot of BeyondC
 [PHP Package Development](https://beyondco.de/video-courses/php-package-development)
 
 Before doing the video course I had developed many versions of the same thing but it was never standalone and as a consequence over the years it was difficult to maintain and quickly use in new projects.
+
+## How to contribute
+
+Please add issues and merge requests via GitHub. 
 
 ## License
 

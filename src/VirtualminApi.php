@@ -48,6 +48,7 @@ class VirtualminApi
             $domains[] = [
                 'server'           => $this->server['hostname'],
                 'name'             => $domain->name,
+                'id'               => $domain->values->id[0],
                 'type'             => $this->getHostingType($domain),
                 'username'         => $domain->values->username[0] ?? '',
                 'password'         => $domain->values->password[0] ?? '',

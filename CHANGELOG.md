@@ -2,6 +2,10 @@
 
 All notable changes to `virtualmin-api` will be documented in this file.
 
+## v0.1.3 - 2022-02-03
+
+- Change scope of runProgram to public
+
 ## v0.1.2 - 2022-01-26
 
 - Added ability to create domain

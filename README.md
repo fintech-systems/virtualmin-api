@@ -48,13 +48,13 @@ Framework Agnostic PHP:
 ```php
 use \FintechSystems\VirtualminApi\VirtualminApi;
 $api = new VirtualminApi;
-$api->changePlan('example.com', 'New Plan Name);
+$api->changePlan('example.com', 'New Plan Name');
 ```
 
 Laravel App:
 
 ```php
-VirtualminApi::changePlan('example.com', 'New Plan Name);
+VirtualminApi::changePlan('example.com', 'New Plan Name');
 ```
 
 ## Create Domain

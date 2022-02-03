@@ -168,7 +168,7 @@ class VirtualminApi
         return null;
     }
 
-    private function runProgram($program, $data = null)
+    public function runProgram($program, $data = null)
     {
         $hostname = $this->server['hostname'];
         $username = $this->server['username'] ?? 'root';

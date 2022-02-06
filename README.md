@@ -122,6 +122,7 @@ For local editing, add this to `composer.json`:
 
 - [Eugene van der Merwe](https://github.com/eugenevdm)
 - [Fabio Montefuscolo](https://github.com/fabiomontefuscolo)
+- [Marc Laporte](https://github.com/marclaporte)
 
 ## Inspiration
 

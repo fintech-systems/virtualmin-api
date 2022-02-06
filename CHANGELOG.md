@@ -2,6 +2,11 @@
 
 All notable changes to `virtualmin-api` will be documented in this file.
 
+## v0.1.4 - 2022-02-06
+
+- Add the domain ID to the domain info (PR #19)
+- Update contributors in README
+
 ## v0.1.3 - 2022-02-03
 
 - Change scope of runProgram to public

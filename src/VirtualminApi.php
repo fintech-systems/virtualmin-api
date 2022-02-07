@@ -43,21 +43,23 @@ class VirtualminApi
         $domains = [];
 
         $output = json_decode($this->listDomains());
-
-        foreach ($output->data as $domain) {
-            $domains[] = [
-                'server'           => $this->server['hostname'],
-                'name'             => $domain->name,
-                'type'             => $this->getHostingType($domain),
-                'username'         => $domain->values->username[0] ?? '',
-                'password'         => $domain->values->password[0] ?? '',
-                'plan'             => $domain->values->plan[0],
-                'disk_space_used'  => $domain->values->server_byte_quota_used[0] ?? 0,
-                'disk_space_limit' => $this->getDiskSpaceLimit($domain),
-                'bandwidth_used'   => $domain->values->bandwidth_byte_usage[0] ?? 0,
-                'bandwidth_limit'   => $this->getBandwidthLimit($domain),
-                'status'           => (isset($domain->values->disabled) ? 'suspended' : 'active'),
-            ];
+        
+        if ($output) {
+            foreach ($output->data as $domain) {
+                $domains[] = [
+                    'server'           => $this->server['hostname'],
+                    'name'             => $domain->name,
+                    'type'             => $this->getHostingType($domain),
+                    'username'         => $domain->values->username[0] ?? '',
+                    'password'         => $domain->values->password[0] ?? '',
+                    'plan'             => $domain->values->plan[0],
+                    'disk_space_used'  => $domain->values->server_byte_quota_used[0] ?? 0,
+                    'disk_space_limit' => $this->getDiskSpaceLimit($domain),
+                    'bandwidth_used'   => $domain->values->bandwidth_byte_usage[0] ?? 0,
+                    'bandwidth_limit'   => $this->getBandwidthLimit($domain),
+                    'status'           => (isset($domain->values->disabled) ? 'suspended' : 'active'),
+                ];
+            }
         }
 
         return $domains;

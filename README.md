@@ -120,10 +120,10 @@ For local editing, add this to `composer.json`:
 ```
 ## Credits
 
-- [Domeshow](https://github.com/Domeshow)
 - [Eugene van der Merwe](https://github.com/eugenevdm)
 - [Fabio Montefuscolo](https://github.com/fabiomontefuscolo)
 - [Marc Laporte](https://github.com/marclaporte)
+- [Domeshow](https://github.com/Domeshow)
 
 ## Inspiration
 

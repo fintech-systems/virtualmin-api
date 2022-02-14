@@ -2,6 +2,10 @@
 
 All notable changes to `virtualmin-api` will be documented in this file.
 
+## v0.1.5 - 2022-02-14
+
+- FIX: Check if actual output is returned on getDomains() before looping (PR-23)
+
 ## v0.1.4 - 2022-02-06
 
 - Add the domain ID to the domain info (PR #19)
